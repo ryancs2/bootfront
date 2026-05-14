@@ -7,13 +7,26 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" integrity="sha256-pdY4ejLKO67E0CM2tbPtq1DJ3VGDVVdqAR6j3ZwdiE4=" crossorigin="anonymous">
     <title>BootFront</title>
+    <style>
+        .template-aside {
+            background-color: #e3e3e3;
+        }
+
+        @media screen and (min-width: 768px) {
+            .template-aside {
+                max-width: 220px;
+            }
+        }
+    </style>
 </head>
 
-<body>
+<body class="bg-primary">
 
-    <header class="bg-primary fixed-top">
-        <nav class="container navbar navbar-expand-sm navbar-dark bg-primary">
-            <div class="container-fluid">
+    <a id="top"></a>
+
+    <header class="bg-dark fixed-top">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <div class="container">
                 <a class="navbar-brand" href="javascript:void(0)">
                     <h1 class="m-0 fs-4">Boot<i class="bi bi-bootstrap text-warning m-1"></i>Front</h1>
                 </a>
@@ -23,8 +36,7 @@
                 <div class="collapse navbar-collapse" id="mynavbar">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)">
-                                Início</a>
+                            <a class="nav-link" href="javascript:void(0)">Ínicio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="javascript:void(0)">Lista</a>
@@ -42,9 +54,9 @@
                             </ul>
                         </li>
                     </ul>
-                    <form class="d-flex mt-2 mt-sm-0">
+                    <form action="search/" method="get" class="d-flex mt-2 mt-sm-0">
                         <div class="input-group">
-                            <input class="form-control" type="search" placeholder="Pesquisar...">
+                            <input class="form-control" type="search" placeholder="Pesquisar..." name="q">
                             <button class="btn btn-primary" type="button"><i class="bi bi-search"></i></button>
                         </div>
                     </form>
@@ -53,29 +65,115 @@
         </nav>
     </header>
 
-    <main class="pt-4 mt-5">
+    <main class="container pt-4 mt-5 bg-light d-flex flex-column flex-md-row">
 
-        <section>
+        <section class="p-3 flex-grow-1">
             <h2>Título</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit accusantium placeat asperiores dolorem possimus enim reprehenderit autem non? Ad reiciendis obcaecati autem sed enim odio recusandae odit perspiciatis vel nam!</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed omnis iste ipsum vel impedit magnam recusandae ut aperiam explicabo ex praesentium perferendis repudiandae cupiditate, voluptatibus saepe facilis facere nisi assumenda.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed omnis iste ipsum vel impedit magnam recusandae ut aperiam explicabo ex praesentium perferendis repudiandae cupiditate, voluptatibus saepe facilis facere nisi assumenda.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed omnis iste ipsum vel impedit magnam recusandae ut aperiam explicabo ex praesentium perferendis repudiandae cupiditate, voluptatibus saepe facilis facere nisi assumenda.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed omnis iste ipsum vel impedit magnam recusandae ut aperiam explicabo ex praesentium perferendis repudiandae cupiditate, voluptatibus saepe facilis facere nisi assumenda.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed omnis iste ipsum vel impedit magnam recusandae ut aperiam explicabo ex praesentium perferendis repudiandae cupiditate, voluptatibus saepe facilis facere nisi assumenda.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed omnis iste ipsum vel impedit magnam recusandae ut aperiam explicabo ex praesentium perferendis repudiandae cupiditate, voluptatibus saepe facilis facere nisi assumenda.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed omnis iste ipsum vel impedit magnam recusandae ut aperiam explicabo ex praesentium perferendis repudiandae cupiditate, voluptatibus saepe facilis facere nisi assumenda.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed omnis iste ipsum vel impedit magnam recusandae ut aperiam explicabo ex praesentium perferendis repudiandae cupiditate, voluptatibus saepe facilis facere nisi assumenda.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed omnis iste ipsum vel impedit magnam recusandae ut aperiam explicabo ex praesentium perferendis repudiandae cupiditate, voluptatibus saepe facilis facere nisi assumenda.</p>
+
+            <div class="card m-3 mx-auto" style="max-width: 300px;">
+                <img class="card-img-top" src="https://picsum.photos/400/200" alt="Imagem aleátória">
+                <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio iusto, numquam laudantium ducimus sequi molestiae aliquam, possimus praesentium deserunt nemo debitis? Ratione labore error non, adipisci excepturi doloribus tempora possimus?</div>
+                <div class="card-footer text-center">Rodapé</div>
+            </div>
+
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed omnis iste ipsum vel impedit magnam recusandae ut aperiam explicabo ex praesentium perferendis repudiandae cupiditate, voluptatibus saepe facilis facere nisi assumenda.</p>
         </section>
 
-        <aside>Conteúdo Complementar</aside>
+        <aside class="template-aside flex-md-shrink-0 p-3 mb-3 rounded shadow-sm">
+            <h3>Conteúdo Complementar</h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem adipisci eaque at suscipit quisquam officiis molestiae aliquid! Minus quis tempore omnis corporis ipsam!
+        </aside>
 
     </main>
 
-    <footer>
-        Meu Footer
+    <footer class="bg-dark text-light">
+        <div class="container d-flex justify-content-between justify-content-sm-around p-3">
+
+            <div>
+                <h4>Redes Sociais</h4>
+                <ul>
+                    <li>
+                        <a href="https://instragram.com" target="_blank">
+                            <i class="bi bi-instagram"></i> <span>Instagram</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://facebook.com" target="_blank">
+                            <i class="bi bi-facebook"></i> <span>Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://linkedin.com" target="_blank">
+                            <i class="bi bi-linkedin"></i> <span>LinkedIn</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://youtube.com" target="_blank">
+                            <i class="bi bi-youtube"></i> <span>Youtube</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="d-none d-sm-block">
+                <h4>Parceiros</h4>
+                <ul>
+                    <li>
+                        <a href="#coca-cola">
+                            <i class="bi bi-person-heart"></i> <span>Coca-cola</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#maquidonalds">
+                            <i class="bi bi-person-heart"></i> <span>MacDonalds</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#Burguerquing">
+                            <i class="bi bi-person-heart"></i> <span>BurgerKing</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#pepici">
+                            <i class="bi bi-person-heart"></i> <span>Pepsi</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Acesso Rápido</h4>
+                <ul>
+                    <li>
+                        <a href="contacts.html">
+                            <i class="bi bi-chat-text-fill"></i> <span>Faça contato</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="about-site.html">
+                            <i class="bi bi-info-circle-fill"></i> <span>Sobre o Site</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="about-author.html">
+                            <i class="bi bi-person-badge"></i> <span>Sobre os autores</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="privacy.html">
+                            <i class="bi bi-person-fill-lock"></i> <span>Sua privacidade</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="container d-flex justify-content-between align-items-center border-top">
+            <a href="index.html"><i class="bi bi-house-door-fill fs-1"></i></a>
+            <div>&copy; 2026 Joca da Silva</div>
+            <a href="#top"><i class="bi bi-arrow-up-square-fill fs-1"></i></a>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
