@@ -4,10 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" integrity="sha256-pdY4ejLKO67E0CM2tbPtq1DJ3VGDVVdqAR6j3ZwdiE4=" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+        integrity="sha256-pdY4ejLKO67E0CM2tbPtq1DJ3VGDVVdqAR6j3ZwdiE4=" crossorigin="anonymous">
     <title>BootFront</title>
     <style>
+        /* BACKGROUND */
+
+        body {
+            background-color: black;
+            background-image: url("img/bg-01.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+
+
+
+        /* LINKS do FOOTER*/
+
+        footer a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            transition: .2s;
+        }
+
+        footer a:hover {
+            color: rgb(32, 123, 197);
+        }
+
+        /* Remover marcadores da lista de links do footer */
+        footer ul {
+            list-style: none;
+            padding-left: 1rem;
+        }
+
+        body>main {
+            background-color: rgba(255, 255, 255, .95)
+        }
+
+
+
         .template-aside {
             background-color: #e3e3e3;
         }
@@ -20,7 +60,7 @@
     </style>
 </head>
 
-<body class="bg-primary">
+<body class=" vh-100 d-flex flex-column">
 
     <a id="top"></a>
 
@@ -42,7 +82,8 @@
                             <a class="nav-link" href="javascript:void(0)">Lista</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Sobre</a>
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown">Sobre</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Faça Contato</a></li>
                                 <li><a class="dropdown-item" href="#">Sobre o Site</a></li>
@@ -65,23 +106,26 @@
         </nav>
     </header>
 
-    <main class="container pt-4 mt-5 bg-light d-flex flex-column flex-md-row">
+    <main class="container pt-4 mt-5 d-flex flex-column flex-md-row flex-grow-1">
 
         <section class="p-3 flex-grow-1">
             <h2>Título</h2>
 
-            <div class="card m-3 mx-auto" style="max-width: 300px;">
-                <img class="card-img-top" src="https://picsum.photos/400/200" alt="Imagem aleátória">
-                <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio iusto, numquam laudantium ducimus sequi molestiae aliquam, possimus praesentium deserunt nemo debitis? Ratione labore error non, adipisci excepturi doloribus tempora possimus?</div>
-                <div class="card-footer text-center">Rodapé</div>
-            </div>
-
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed omnis iste ipsum vel impedit magnam recusandae ut aperiam explicabo ex praesentium perferendis repudiandae cupiditate, voluptatibus saepe facilis facere nisi assumenda.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed omnis iste ipsum vel impedit magnam
+                recusandae ut aperiam explicabo ex praesentium perferendis repudiandae cupiditate, voluptatibus saepe
+                facilis facere nisi assumenda.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed omnis iste ipsum vel impedit magnam
+                recusandae ut aperiam explicabo ex praesentium perferendis repudiandae cupiditate, voluptatibus saepe
+                facilis facere nisi assumenda.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed omnis iste ipsum vel impedit magnam
+                recusandae ut aperiam explicabo ex praesentium perferendis repudiandae cupiditate, voluptatibus saepe
+                facilis facere nisi assumenda.</p>
         </section>
 
         <aside class="template-aside flex-md-shrink-0 p-3 mb-3 rounded shadow-sm">
             <h3>Conteúdo Complementar</h3>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem adipisci eaque at suscipit quisquam officiis molestiae aliquid! Minus quis tempore omnis corporis ipsam!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem adipisci eaque at suscipit quisquam officiis
+            molestiae aliquid! Minus quis tempore omnis corporis ipsam!
         </aside>
 
     </main>
@@ -170,13 +214,15 @@
         </div>
 
         <div class="container d-flex justify-content-between align-items-center border-top">
-            <a href="index.html"><i class="bi bi-house-door-fill fs-1"></i></a>
-            <div>&copy; 2026 Joca da Silva</div>
-            <a href="#top"><i class="bi bi-arrow-up-square-fill fs-1"></i></a>
+            <a href="index.html"><i class="bi bi-house-door-fill fs-2"></i></a>
+            <div>&copy; 2026 Ryan Cristhian</div>
+            <a href="#top"><i class="bi bi-arrow-up-square-fill fs-3"></i></a>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
