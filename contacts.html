@@ -48,6 +48,12 @@
             background-color: #e3e3e3;
         }
 
+        /* Desabilita o botão de envio dor formulário de contatos enquanto este está inválido */
+        #contact-form:invalid button {
+            pointer-events: none;
+            opacity: 0.65;
+        }
+
         @media screen and (min-width: 768px) {
             .template-aside {
                 max-width: 220px;
@@ -91,11 +97,10 @@
                             </ul>
                         </li>
                     </ul>
-
-                    <!-- Premita o envio somente se o campo for preenchido com pelo menos 2 caracteres -->
                     <form action="search/" method="get" class="d-flex mt-2 mt-sm-0">
                         <div class="input-group">
-                            <input class="form-control" type="search" placeholder="Pesquisar..." name="q" required minlength="2">
+                            <input class="form-control" type="search" placeholder="Pesquisar..." name="q" required
+                                minlength="2">
                             <button class="btn btn-primary" type="submit"><i class="bi bi-search"></i></button>
                         </div>
                     </form>
@@ -107,16 +112,56 @@
     <main class="container pt-4 mt-5 d-flex flex-column flex-md-row flex-grow-1">
 
         <section class="p-3 flex-grow-1">
-            <h2>Título</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed omnis iste ipsum vel impedit magnam
-                recusandae ut aperiam explicabo ex praesentium perferendis repudiandae cupiditate, voluptatibus saepe
-                facilis facere nisi assumenda.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed omnis iste ipsum vel impedit magnam
-                recusandae ut aperiam explicabo ex praesentium perferendis repudiandae cupiditate, voluptatibus saepe
-                facilis facere nisi assumenda.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed omnis iste ipsum vel impedit magnam
-                recusandae ut aperiam explicabo ex praesentium perferendis repudiandae cupiditate, voluptatibus saepe
-                facilis facere nisi assumenda.</p>
+
+            <h2>Faça Contato</h2>
+
+            <div class="card mx-auto mt-3" style="max-width: 575px;">
+                <div class="card-body">
+
+                    Preencha todos os campos abaixo para entrar em contato conosco.
+                    <small class="text-danger text-center d-block"><em>Todos os campos obrigatórios!</em></small>
+
+                    <form method="post" class="was-validated" id="contact-form">
+
+                        <div class="form-floating mb-3 mt-3">
+                            <input type="text" class="form-control" id="name" placeholder="Seu nome" name="name"
+                                required minlength="2">
+                            <label for="name">Nome</label>
+                            <div class="valid-feedback">&nbsp;</div>
+                            <div class="invalid-feedback">Preencha seu nome.</div>
+                        </div>
+
+                        <div class="form-floating mb-3 mt-3">
+                            <input type="email" class="form-control" id="email" placeholder="Seu e-mail" name="email"
+                                required>
+                            <label for="email">E-mail</label>
+                            <div class="valid-feedback">&nbsp;</div>
+                            <div class="invalid-feedback">Preencha seu e-mail.</div>
+                        </div>
+
+                        <div class="form-floating mb-3 mt-3">
+                            <input type="text" class="form-control" id="subject" placeholder="Assunto do contato"
+                                name="subject" required minlength="3">
+                            <label for="subject">Assunto</label>
+                            <div class="valid-feedback">&nbsp;</div>
+                            <div class="invalid-feedback">Preencha o assunto.</div>
+                        </div>
+
+                        <div class="form-floating">
+                            <textarea class="form-control" id="message" name="message"
+                                placeholder="Escreva sua mensagem" required minlength="4"></textarea>
+                            <label for="message">Mensagem</label>
+                            <div class="valid-feedback">&nbsp;</div>
+                            <div class="invalid-feedback">Preencha o mensagem.</div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+
+                    </form>
+
+                </div>
+            </div>
+
         </section>
 
         <aside class="template-aside flex-md-shrink-0 p-3 mb-3 rounded shadow-sm">
